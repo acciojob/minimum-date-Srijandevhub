@@ -1,5 +1,8 @@
 function minDate(dates) {
   //write you code here
+	const dateObjects = dates.map(date => new Date(date));
+  const minDate = new Date(Math.min(...dateObjects));
+  return minDate.toISOString().split('T')[0].split("-").join("/");
 }
 
 // Do not change the code
